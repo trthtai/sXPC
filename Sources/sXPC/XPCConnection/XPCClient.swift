@@ -157,12 +157,12 @@ public class XPCClient<RemoteInterface, ExportedInterface, ConnectedState> {
                 connectedStateStore.update(nil)
             }
             
-            guard let requestEndpointHandler else { return }
+            guard let `requestEndpointHandler` = requestEndpointHandler else { return }
             
             queue.asyncAfter(deadline: .now() + (immediately ? 0 : reconnectDelay)) {
                 requestEndpointHandler { [weak self] endpoint in
                     guard let self = self else { return }
-                    if let endpoint {
+                    if let `endpoint` = endpoint {
                         self.connection = self.createConnection(endpoint)
                         self.prepareAndConnect(to: self.connection)
                     } else {
