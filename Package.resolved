@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftConvenience",
+        "repositoryURL": "https://github.com/trthtai/SwiftConvenience.git",
+        "state": {
+          "branch": null,
+          "revision": "2c5296d1c6f734878f65897fd3fc78308b1d6a04",
+          "version": "0.0.21"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
